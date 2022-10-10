@@ -1,0 +1,36 @@
+{{ template "layout.html" .}}
+
+{{ define "header" }}
+<meta http-equiv="refresh" content="3">
+{{ end }}
+
+{{ define "content" }}
+<div class="text-center mb-5">
+    <h1>Wind and Water</h1>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 p-4">
+        <div class="card" style="background-color: deepskyblue; color: white;">
+            <div class="card-body">
+                <h5 class="card-title">Wind</h5>
+                <p class="card-text">
+                    <span class="fs-1 fw-bold">{{.Wind}}</span> <span class="fs-5 fw-normal">meter/detik</span>
+                </p>
+                <a href="#" class={{.WindStatusClass}}>{{.WindStatus}}</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 p-4">
+        <div class="card" style="background-color: dodgerblue; color: white;">
+            <div class="card-body">
+                <h5 class="card-title">Water</h5>
+                <p class="card-text">
+                    <span class="fs-1 fw-bold">{{.Water}}</span> <span class="fs-5 fw-normal">meter</span>
+                </p>
+                <a href="#" class={{.WaterStatusClass}}>{{.WaterStatus}}</a>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
